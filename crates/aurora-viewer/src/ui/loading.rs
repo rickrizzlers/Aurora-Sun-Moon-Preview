@@ -328,7 +328,7 @@ fn banner(
     painter.text(
         Pos2::new(brand_text, brand.y),
         egui::Align2::LEFT_CENTER,
-        "Aurora Viewer",
+        "Sun & Moon Preview",
         egui::FontId::proportional(15.0 * k),
         p.violet_pale.gamma_multiply(a),
     );

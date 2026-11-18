@@ -5,8 +5,8 @@
 //! session) instead of the Legacy Viewer's bin_conf.dat file. With no store
 //! at hand nothing is kept: there is no fallback file.
 
-const SERVICE: &str = "Aurora Viewer";
-const MFA_SERVICE: &str = "Aurora Viewer MFA";
+const SERVICE: &str = "Sun Moon Preview";
+const MFA_SERVICE: &str = "Sun Moon Preview MFA";
 const MFA_LIFETIME: u64 = 30 * 24 * 60 * 60;
 
 /// Firestorm LLLoginInstance::saveMFAHash: separate protected map per user/grid.
@@ -224,7 +224,7 @@ pub fn forget(grid: &str, username: &str) {
 /// (LLFloaterPreferenceProxy::onBtnOk): one entry of the credential store,
 /// never the settings file, the log or a report. With no store at hand
 /// nothing is kept, and the login says the credentials are missing.
-const PROXY_SERVICE: &str = "Aurora Viewer Proxy";
+const PROXY_SERVICE: &str = "Sun Moon Preview Proxy";
 const PROXY_ACCOUNT: &str = "SOCKS5";
 
 #[derive(serde::Serialize, serde::Deserialize)]

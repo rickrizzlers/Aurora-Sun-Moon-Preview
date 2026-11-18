@@ -358,7 +358,7 @@ const PAUSED_RESOLUTION_DIVISOR: u32 = 16;
 /// The wolf logo (window icon, login and loading screens, About, system
 /// notifications), read from the branding folder: one file for the viewer,
 /// the README and the exe icon.
-pub(crate) const LOGO_PNG: &[u8] = include_bytes!("../../../assets/branding/aurora-logo.png");
+pub(crate) const LOGO_PNG: &[u8] = include_bytes!("../../../assets/branding/sun-moon.png");
 
 struct LogoData {
     ui: egui::ColorImage,
@@ -12671,6 +12671,7 @@ impl App {
             tex_anim_at: hold.map(|h| h.at),
             sun_dir: env.sun_dir,
             sun_visible: env.sun_visible,
+            sky_rays: self.settings.directional_rays(env.sky.sun_dir.z >= 0.0, env.sky.moon_dir.z >= 0.0),
             sun_color: env.sun_color,
             sky_zenith: env.zenith,
             sky_horizon: env.horizon,

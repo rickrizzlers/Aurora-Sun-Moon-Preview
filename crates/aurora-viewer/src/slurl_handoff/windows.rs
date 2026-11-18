@@ -26,7 +26,7 @@ pub fn release() {
     discovery::release();
 }
 
-/// `\\.\pipe\aurora-viewer-slurl-<session>[-demo][-<title>]`.
+/// `\\.\pipe\sun-moon-preview-slurl-<session>[-demo][-<title>]`.
 fn pipe_name() -> String {
     legacy_name(&Scope::current())
 }
@@ -39,7 +39,7 @@ fn legacy_name(scope: &Scope) -> String {
     unsafe {
         ProcessIdToSessionId(GetCurrentProcessId(), &mut session);
     }
-    let mut name = format!(r"\\.\pipe\aurora-viewer-slurl-{session}");
+    let mut name = format!(r"\\.\pipe\sun-moon-preview-slurl-{session}");
     if scope.demo {
         name.push_str("-demo");
     }

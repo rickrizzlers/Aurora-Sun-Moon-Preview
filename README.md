@@ -11,3 +11,10 @@ In **Preferences → Graphics → Light → Shadows**, choose a shadow quality a
 The comparison images in the release use the offline scene, a fixed camera and matching lighting for each off/on pair. For reproducible captures see scripts/Capture-SkyRays.ps1. To build from source, install Aurora's Windows Rust dependencies, run `cargo build --locked -p aurora-viewer`, then use scripts/package.ps1 to assemble the portable folder.
 
 This software is distributed under the upstream GNU GPL v3 or later. See LICENSE, NOTICE.md and THIRD-PARTY-LICENSES.md for copyright and asset credits.
+
+### Offline forest comparison
+
+| Source | Rays off | Rays on |
+| --- | --- | --- |
+| Sun | ![Sun off](docs/sky-rays/sun-off.png) | ![Sun on](docs/sky-rays/sun-on.png) |
+| Moon | ![Moon off](docs/sky-rays/moon-off.png) | ![Moon on](docs/sky-rays/moon-on.png) |
